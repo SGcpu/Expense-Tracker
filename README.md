@@ -178,4 +178,3 @@ Licensed under the [MIT License](./LICENSE).
   <a href="https://github.com/41vi4p/Expense-Tracker/issues"><strong>🐛 Report Bug</strong></a> ·
   <a href="https://github.com/41vi4p/Expense-Tracker/issues"><strong>✨ Request Feature</strong></a>
 </p>
-

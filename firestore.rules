@@ -57,6 +57,15 @@ service cloud.firestore {
       allow delete: if isOwner(resource.data.userId);
     }
 
+    // User database configurations (Supabase connection settings) private to the document owner
+    match /user_database_configs/{userId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId)
+        && validStr(request.resource.data.supabaseUrl, 500)
+        && validStr(request.resource.data.supabaseAnonKey, 1000);
+      allow delete: if isOwner(userId);
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }
