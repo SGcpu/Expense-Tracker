@@ -1,7 +1,7 @@
 # ExpenseTracker
 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-3.1.1-06b6d4?style=for-the-badge&labelColor=0a0a0a" />
+  <img alt="Version" src="https://img.shields.io/badge/version-3.2.0-06b6d4?style=for-the-badge&labelColor=0a0a0a" />
   <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-06b6d4?style=for-the-badge&labelColor=0a0a0a" />
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white&labelColor=0a0a0a" />
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0a0a0a" />
@@ -14,8 +14,12 @@ A modern expense tracking app built with Next.js, Supabase, and Firebase, availa
 
 ### 🔗 [**Live Demo → expense-tracker-41vi4p.vercel.app**](https://expense-tracker-41vi4p.vercel.app/)
 
-## 🆕 Version 3.1.0
+## 🆕 Version 3.2.0
 
+- **⛽ Commute & Fuel Hub (`/commute`)** - Real mileage tracking (km/L) from odometer differentials, cost per km analysis, and fuel refill history.
+- **🧮 Daily Commute Cost Calculator** - Calculate daily and monthly commute expenses across two-wheelers, cars, and public transit with savings projections.
+- **⚡ 1-Tap Commute Loggers** - Instant action chips for petrol refills, metro/bus tickets, auto/cab fares, parking, and highway tolls.
+- **🎯 Monthly Spending Guard & Budgeting** - Live monthly budget progress bar on the Dashboard with alert thresholds and commute spend breakdowns.
 - **⚡ One-Click Supabase Deployment** - Run and connect your personal cloud database in seconds with no database experience needed
 - **🔄 Cross-Device Account Sync** - Database credentials link automatically to your Google account; logging in anywhere reconnects you seamlessly
 - **📱 Android app** - download the APK from [Releases](https://github.com/41vi4p/Expense-Tracker/releases/latest); a new build is published automatically for every version
@@ -128,8 +132,9 @@ Releases are built by GitHub Actions whenever the version in `package.json` chan
 
 ## 📱 Pages
 
-- **Dashboard**: Overview of financial stats and recent transactions
-- **Transactions**: Complete list with search and filtering
+- **Dashboard**: Overview of financial stats, monthly budget tracker, and recent transactions
+- **Commute & Fuel**: Fuel refill logger, true mileage tracker, and daily commute cost estimator
+- **Transactions**: Complete list with search, filtering, and 1-tap quick presets
 - **Analytics**: Visual breakdown of spending by category and trends
 - **Notes**: Financial notes with categories and tags
 - **Activity**: Track user actions and account activities
@@ -173,4 +178,3 @@ Licensed under the [MIT License](./LICENSE).
   <a href="https://github.com/41vi4p/Expense-Tracker/issues"><strong>🐛 Report Bug</strong></a> ·
   <a href="https://github.com/41vi4p/Expense-Tracker/issues"><strong>✨ Request Feature</strong></a>
 </p>
-
