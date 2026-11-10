@@ -13,6 +13,7 @@ import {
   Home, 
   BarChart3, 
   CreditCard,
+  Compass,
   Zap,
   Activity,
   FileText,
@@ -34,6 +35,7 @@ export default function Header() {
   const navItems = [
     { label: 'Dashboard', icon: Home, href: '/dashboard' },
     { label: 'Transactions', icon: CreditCard, href: '/transactions' },
+    { label: 'Commute & Fuel', icon: Compass, href: '/commute' },
     { label: 'Analytics', icon: BarChart3, href: '/analytics' },
     { label: 'Notes', icon: FileText, href: '/notes' },
     { label: 'About', icon: Info, href: '/about' },
