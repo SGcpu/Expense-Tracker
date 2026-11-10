@@ -1,7 +1,7 @@
 # ExpenseTracker
 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-3.1.0-06b6d4?style=for-the-badge&labelColor=0a0a0a" />
+  <img alt="Version" src="https://img.shields.io/badge/version-3.1.1-06b6d4?style=for-the-badge&labelColor=0a0a0a" />
   <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-06b6d4?style=for-the-badge&labelColor=0a0a0a" />
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white&labelColor=0a0a0a" />
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0a0a0a" />

@@ -7,6 +7,11 @@ The text of the matching section is used verbatim as the GitHub release notes.
 
 Older history (pre-3.0) lives in [VERSION_HISTORY_LEGACY.md](./VERSION_HISTORY_LEGACY.md).
 
+## [3.1.1] - 2026-11-10
+
+### Security
+- Added explicit Firestore security rules for `user_database_configs/{userId}` to protect synchronized Supabase credentials, ensuring access is strictly restricted to the authenticated document owner with string length validation.
+
 ## [3.1.0] - 2026-11-10
 
 ### Added
