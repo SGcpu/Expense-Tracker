@@ -16,9 +16,11 @@ import DashboardLayout from '@/components/DashboardLayout';
 import StatsCard from '@/components/StatsCard';
 import TransactionList from '@/components/TransactionList';
 import AddTransactionModal from '@/components/AddTransactionModal';
+import BudgetTrackerCard from '@/components/BudgetTrackerCard';
 import ExpenseChart from '@/components/charts/ExpenseChart';
 import IncomeChart from '@/components/charts/IncomeChart';
 import TrendChart from '@/components/charts/TrendChart';
+import { Compass } from 'lucide-react';
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -145,6 +147,11 @@ export default function DashboardPage() {
           </motion.div>
         </div>
 
+        {/* Monthly Budget & Spending Guard */}
+        {user?.uid && (
+          <BudgetTrackerCard userId={user.uid} transactions={transactions} />
+        )}
+
         {/* Quick Actions */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -155,20 +162,27 @@ export default function DashboardPage() {
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-display font-semibold">Quick Actions</h2>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
             <button
               onClick={handleModalOpen}
-              className="bg-gradient-primary hover:bg-gradient-to-r hover:from-primary hover:to-accent text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-3 glow hover:glow-accent transform hover:scale-105"
+              className="bg-gradient-primary hover:bg-gradient-to-r hover:from-primary hover:to-accent text-white font-semibold py-3.5 px-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2.5 glow hover:glow-accent transform hover:scale-102"
             >
               <Plus className="w-5 h-5" />
-              <span className="font-body">Add Transaction</span>
+              <span className="font-body text-sm sm:text-base">Add Transaction</span>
+            </button>
+            <button
+              onClick={() => router.push('/commute')}
+              className="backdrop-blur-glass border border-border/50 hover:border-primary/50 text-foreground font-semibold py-3.5 px-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2.5 hover:glow transform hover:scale-102"
+            >
+              <Compass className="w-5 h-5 text-primary" />
+              <span className="font-body text-sm sm:text-base">Commute & Fuel</span>
             </button>
             <button
               onClick={() => router.push('/analytics')}
-              className="backdrop-blur-glass border border-border/50 hover:border-primary/50 text-foreground font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-3 hover:glow transform hover:scale-105"
+              className="backdrop-blur-glass border border-border/50 hover:border-primary/50 text-foreground font-semibold py-3.5 px-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2.5 hover:glow transform hover:scale-102"
             >
-              <TrendingUp className="w-5 h-5" />
-              <span className="font-body">View Analytics</span>
+              <TrendingUp className="w-5 h-5 text-accent" />
+              <span className="font-body text-sm sm:text-base">Analytics</span>
             </button>
           </div>
         </motion.div>

@@ -38,6 +38,31 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Support demo/testing mode when demo user is set in localStorage
+    if (typeof window !== 'undefined' && localStorage.getItem('demo_user_logged_in') === 'true') {
+      setUser({
+        uid: 'demo-user-123',
+        email: 'commuter@example.com',
+        displayName: 'Daily Commuter',
+        emailVerified: true,
+        isAnonymous: false,
+        metadata: {},
+        providerData: [],
+        refreshToken: '',
+        tenantId: null,
+        delete: async () => {},
+        getIdToken: async () => 'mock-token',
+        getIdTokenResult: async () => ({} as any),
+        reload: async () => {},
+        toJSON: () => ({}),
+        phoneNumber: null,
+        photoURL: null,
+        providerId: 'google.com'
+      } as unknown as User);
+      setLoading(false);
+      return;
+    }
+
     if (!isFirebaseConfigured || !auth) {
       setLoading(false);
       return;

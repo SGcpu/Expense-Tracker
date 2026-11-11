@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, FileText, Calendar, Tag } from 'lucide-react';
 import { EXPENSE_CATEGORIES, INCOME_CATEGORIES } from '@/types';
 import { useDatabase } from '@/contexts/DatabaseContext';
+import { COMMUTE_PRESETS, CommutePreset } from '@/lib/commute';
 import toast from 'react-hot-toast';
 
 interface AddTransactionModalProps {
@@ -81,6 +82,31 @@ export default function AddTransactionModal({ onClose, onTransactionAdded, userI
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Quick Presets for Commuters & Daily Essentials */}
+            <div>
+              <label className="block text-xs font-body font-medium text-foreground/70 mb-2">
+                ⚡ Quick Presets (One-tap fill)
+              </label>
+              <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+                {COMMUTE_PRESETS.slice(0, 5).map((preset: CommutePreset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    onClick={() => {
+                      setType('expense');
+                      setAmount(preset.amount.toString());
+                      setDescription(preset.description);
+                      setCategory(preset.category);
+                    }}
+                    className="flex-shrink-0 px-2.5 py-1.5 rounded-lg border border-border/60 hover:border-primary/50 bg-surface/40 hover:bg-surface text-xs font-medium text-foreground/80 flex items-center space-x-1 transition-all"
+                  >
+                    <span>{preset.icon}</span>
+                    <span>{preset.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Transaction Type */}
             <div>
               <label className="block text-sm font-body font-medium mb-3">

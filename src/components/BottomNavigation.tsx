@@ -2,15 +2,15 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { Home, CreditCard, BarChart3, FileText, Info } from 'lucide-react';
+import { Home, CreditCard, BarChart3, FileText, Compass } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const navItems = [
   { label: 'Transactions', icon: CreditCard, href: '/transactions' },
-  { label: 'Analytics', icon: BarChart3, href: '/analytics' },
+  { label: 'Commute', icon: Compass, href: '/commute' },
   { label: 'Dashboard', icon: Home, href: '/dashboard' },
+  { label: 'Analytics', icon: BarChart3, href: '/analytics' },
   { label: 'Notes', icon: FileText, href: '/notes' },
-  { label: 'About', icon: Info, href: '/about' },
 ];
 
 export default function BottomNavigation() {

@@ -7,6 +7,24 @@ The text of the matching section is used verbatim as the GitHub release notes.
 
 Older history (pre-3.0) lives in [VERSION_HISTORY_LEGACY.md](./VERSION_HISTORY_LEGACY.md).
 
+## [3.2.0] - 2026-11-10
+
+### Added
+- **Daily Commuter & Fuel Tracking Hub (`/commute`)**:
+  - Interactive fuel refill logger tracking odometer readings, fuel quantity (litres/kWh), fuel cost, and pump notes.
+  - Automatic calculation of vehicle mileage (km/L), cost per km, and fuel price per unit computed from odometer differentials.
+  - 1-click option to sync fuel refills directly into main transactions.
+- **Commute Cost & Transit Estimator**:
+  - Parameterized commute cost calculator with quick presets for two-wheelers (motorcycles/scooters) and four-wheelers.
+  - Computes daily cost, monthly projected expense, total distance, and fuel portion based on round trip distance and mileage.
+  - Comparison insights showing potential monthly savings with public transit.
+- **1-Tap Quick Presets for Routine Expenses**:
+  - Single-click action chips for frequent commuter and everyday expenses (Petrol refills, Metro/Bus passes, Auto/Cab fares, Parking, Tolls, Groceries, Chai/Snacks) available on the Commute Hub and within the Add Transaction modal.
+- **Monthly Budget & Spending Guard**:
+  - Configurable monthly spending target widget on the Dashboard with live progress bar and threshold alerts (safe, warning, danger/over-budget).
+  - Dedicated breakdown for monthly transit and fuel spending.
+- **Expanded Commuter Categories**: Added dedicated categories for "Fuel & Petrol" (⛽), "Daily Commute & Transit" (🚇), and "Groceries & Essentials" (🛒).
+
 ## [3.1.1] - 2026-11-10
 
 ### Security
